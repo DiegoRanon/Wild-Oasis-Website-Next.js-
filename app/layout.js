@@ -1,5 +1,5 @@
-import Logo from "./components/Logo";
-import Navigation from "./components/Navigation";
+import Logo from "./_components/Logo";
+import Navigation from "./_components/Navigation";
 
 export const metadata = {
   title: "The Wild Oasis",
@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning="true" data-lt-installed="true">
       <body>
         <header>
           <Logo />

@@ -1,18 +1,13 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+import Navigation from "../_components/Navigation";
+import Counter from "../_components/Counter";
 
-export default async function page() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
-  const data = await res.json();
-
+export default  function page() {
   return (
     <div>
       Cabins
-      <ul>
-        {data.map((user) => (
-          <li key={user.id}>{user.name}</li>
-        ))}
-      </ul>
+
+      <Counter />
     </div>
   );
 }
